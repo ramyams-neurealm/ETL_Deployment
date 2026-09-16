@@ -1,0 +1,20 @@
+{
+  "manual_actions": [],
+  "mapping_name": "m_stage_accounts",
+  "runtime": {
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "datasets": [
+      "RAW_ACCOUNT"
+    ],
+    "name": "RAW_ACCOUNT"
+  },
+  "target": {
+    "datasets": [
+      "STG_ACCOUNT"
+    ],
+    "name": "STG_ACCOUNT"
+  }
+}
