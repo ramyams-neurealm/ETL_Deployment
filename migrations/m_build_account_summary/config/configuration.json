@@ -1,0 +1,32 @@
+{
+  "manual_actions": [
+    "Verify that the source dataset TGT_ACTIVE_ACCOUNT is correctly filtered to include only active accounts.",
+    "Ensure that the target dataset ACCOUNT_SUMMARY can handle nullable ACCOUNT_BALANCE values appropriately."
+  ],
+  "mapping_name": "m_build_account_summary",
+  "runtime": {
+    "database_type": "Oracle",
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "datasets": [
+      {
+        "connection_name": null,
+        "dataset_type": "SOURCE",
+        "name": "TGT_ACTIVE_ACCOUNT"
+      }
+    ],
+    "name": "TGT_ACTIVE_ACCOUNT"
+  },
+  "target": {
+    "datasets": [
+      {
+        "connection_name": null,
+        "dataset_type": "TARGET",
+        "name": "ACCOUNT_SUMMARY"
+      }
+    ],
+    "name": "ACCOUNT_SUMMARY"
+  }
+}
