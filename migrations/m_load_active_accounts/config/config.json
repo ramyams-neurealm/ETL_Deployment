@@ -1,0 +1,26 @@
+{
+  "manual_actions": [
+    "Verify that the target system can handle the precision and scale of the LOAD_TIMESTAMP field as defined.",
+    "Ensure that the source data quality is maintained, particularly for the ACCOUNT_STATUS field, to avoid incorrect filtering."
+  ],
+  "mapping_name": "m_load_active_accounts",
+  "runtime": {
+    "parameters": [
+      "$$LOAD_DATE"
+    ],
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "datasets": [
+      "SRC_ACCOUNT"
+    ],
+    "name": "SRC_ACCOUNT"
+  },
+  "target": {
+    "datasets": [
+      "TGT_ACTIVE_ACCOUNT"
+    ],
+    "name": "TGT_ACTIVE_ACCOUNT"
+  }
+}
