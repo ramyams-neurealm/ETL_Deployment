@@ -1,0 +1,35 @@
+{
+  "manual_actions": [],
+  "mapping_name": "JOB_CUSTOMER_SALES_SUMMARY",
+  "runtime": {
+    "RunDate": "2026-01-01",
+    "SourceSystem": "CRM",
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "datasets": [
+      {
+        "connection_name": null,
+        "dataset_type": "SOURCE",
+        "name": "SRC_CUSTOMERS"
+      },
+      {
+        "connection_name": null,
+        "dataset_type": "SOURCE",
+        "name": "SRC_ORDERS"
+      }
+    ],
+    "name": "SRC_CUSTOMERS"
+  },
+  "target": {
+    "datasets": [
+      {
+        "connection_name": null,
+        "dataset_type": "TARGET",
+        "name": "TGT_CUSTOMER_SALES_SUMMARY"
+      }
+    ],
+    "name": "TGT_CUSTOMER_SALES_SUMMARY"
+  }
+}
