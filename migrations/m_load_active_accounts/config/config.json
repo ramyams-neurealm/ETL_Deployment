@@ -1,0 +1,39 @@
+{
+  "manual_actions": [
+    "Ensure that the source system's 'ACCOUNT_STATUS' field is reliable and up-to-date to prevent incorrect data loading.",
+    "Verify that the system clock is accurate and synchronized to ensure correct 'LOAD_TIMESTAMP' values."
+  ],
+  "mapping_name": "m_load_active_accounts",
+  "runtime": {
+    "parameters": [
+      {
+        "data_type": "date/time",
+        "default_value": "",
+        "name": "$$LOAD_DATE",
+        "scope": "MAPPING"
+      }
+    ],
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "datasets": [
+      {
+        "connection_name": null,
+        "dataset_type": "SOURCE",
+        "name": "SRC_ACCOUNT"
+      }
+    ],
+    "name": "SRC_ACCOUNT"
+  },
+  "target": {
+    "datasets": [
+      {
+        "connection_name": null,
+        "dataset_type": "TARGET",
+        "name": "TGT_ACTIVE_ACCOUNT"
+      }
+    ],
+    "name": "TGT_ACTIVE_ACCOUNT"
+  }
+}
