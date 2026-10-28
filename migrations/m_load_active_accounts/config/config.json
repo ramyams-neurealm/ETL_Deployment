@@ -1,0 +1,40 @@
+{
+  "manual_actions": [
+    "Verify that the source and target systems are compatible with the Oracle database type.",
+    "Ensure that the ETL process is scheduled to run at a time when the system clock is accurate to maintain timestamp integrity.",
+    "Review the ACCOUNT_STATUS field for consistency and accuracy before migration."
+  ],
+  "mapping_name": "m_load_active_accounts",
+  "runtime": {
+    "parameters": [
+      {
+        "data_type": "date/time",
+        "default_value": "",
+        "name": "$$LOAD_DATE",
+        "scope": "MAPPING"
+      }
+    ],
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "datasets": [
+      {
+        "connection_name": null,
+        "dataset_type": "SOURCE",
+        "name": "SRC_ACCOUNT"
+      }
+    ],
+    "name": "SRC_ACCOUNT"
+  },
+  "target": {
+    "datasets": [
+      {
+        "connection_name": null,
+        "dataset_type": "TARGET",
+        "name": "TGT_ACTIVE_ACCOUNT"
+      }
+    ],
+    "name": "TGT_ACTIVE_ACCOUNT"
+  }
+}
