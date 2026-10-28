@@ -1,0 +1,39 @@
+{
+  "manual_actions": [
+    "Verify that the target system can handle the precision and scale of the LOAD_TIMESTAMP field as defined.",
+    "Ensure that the target system's database is configured to accept the data types and structures as defined in the source and target mappings."
+  ],
+  "mapping_name": "m_load_active_accounts",
+  "runtime": {
+    "parameters": [
+      {
+        "data_type": "date/time",
+        "default_value": "",
+        "name": "$$LOAD_DATE",
+        "scope": "MAPPING"
+      }
+    ],
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "datasets": [
+      {
+        "connection_name": null,
+        "dataset_type": "SOURCE",
+        "name": "SRC_ACCOUNT"
+      }
+    ],
+    "name": "SRC_ACCOUNT"
+  },
+  "target": {
+    "datasets": [
+      {
+        "connection_name": null,
+        "dataset_type": "TARGET",
+        "name": "TGT_ACTIVE_ACCOUNT"
+      }
+    ],
+    "name": "TGT_ACTIVE_ACCOUNT"
+  }
+}
