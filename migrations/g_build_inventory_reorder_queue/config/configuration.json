@@ -1,0 +1,34 @@
+{
+  "manual_actions": [
+    "Ensure that the source connection 'sample_inventory_source' is configured.",
+    "Ensure that the target connection 'sample_reorder_target' is configured."
+  ],
+  "mapping_name": "g_build_inventory_reorder_queue",
+  "runtime": {
+    "environment": "DATABRICKS",
+    "framework": "PYSPARK",
+    "parameters": [],
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "datasets": [
+      {
+        "connection_name": "sample_inventory_source",
+        "dataset_type": "SOURCE",
+        "name": "SRC_INVENTORY"
+      }
+    ],
+    "name": "SRC_INVENTORY"
+  },
+  "target": {
+    "datasets": [
+      {
+        "connection_name": "sample_reorder_target",
+        "dataset_type": "TARGET",
+        "name": "TGT_REORDER_QUEUE"
+      }
+    ],
+    "name": "TGT_REORDER_QUEUE"
+  }
+}
