@@ -1,0 +1,36 @@
+{
+  "manual_actions": [],
+  "mapping_name": "JOB_CLIENT_DIRECTORY_LOAD",
+  "runtime": {
+    "parameters": [
+      {
+        "data_type": "String",
+        "default_value": "DEV",
+        "name": "ENV",
+        "scope": "JOB"
+      }
+    ],
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "datasets": [
+      {
+        "connection_name": null,
+        "dataset_type": "SOURCE",
+        "name": "SRC_CLIENT"
+      }
+    ],
+    "name": "SRC_CLIENT"
+  },
+  "target": {
+    "datasets": [
+      {
+        "connection_name": null,
+        "dataset_type": "TARGET",
+        "name": "TGT_CLIENT"
+      }
+    ],
+    "name": "TGT_CLIENT"
+  }
+}
