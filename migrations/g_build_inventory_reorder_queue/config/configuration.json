@@ -1,0 +1,30 @@
+{
+  "manual_actions": [
+    "Ensure that the target system supports the same data types and field constraints as the source system to prevent data integrity issues.",
+    "Verify that the filter and derivation logic is correctly implemented in the target environment to maintain business logic consistency."
+  ],
+  "mapping_name": "g_build_inventory_reorder_queue",
+  "runtime": {
+    "parameters": [],
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "datasets": [
+      {
+        "connection": "sample_inventory_source",
+        "name": "SRC_INVENTORY"
+      }
+    ],
+    "name": "SRC_INVENTORY"
+  },
+  "target": {
+    "datasets": [
+      {
+        "connection": "sample_reorder_target",
+        "name": "TGT_REORDER_QUEUE"
+      }
+    ],
+    "name": "TGT_REORDER_QUEUE"
+  }
+}
