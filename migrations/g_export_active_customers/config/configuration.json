@@ -1,0 +1,27 @@
+{
+  "manual_actions": [],
+  "mapping_name": "g_export_active_customers",
+  "runtime": {
+    "parameters": [],
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "datasets": [
+      {
+        "connection": "sample_customer_source",
+        "name": "SRC_CUSTOMERS"
+      }
+    ],
+    "name": "SRC_CUSTOMERS"
+  },
+  "target": {
+    "datasets": [
+      {
+        "connection": "sample_customer_target",
+        "name": "TGT_ACTIVE_CUSTOMERS"
+      }
+    ],
+    "name": "TGT_ACTIVE_CUSTOMERS"
+  }
+}
