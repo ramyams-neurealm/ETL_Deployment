@@ -1,0 +1,27 @@
+{
+  "manual_actions": [],
+  "mapping_name": "g_build_inventory_reorder_queue",
+  "runtime": {
+    "parameters": [],
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "connections": [
+      "sample_inventory_source"
+    ],
+    "datasets": [
+      "SRC_INVENTORY"
+    ],
+    "name": "SRC_INVENTORY"
+  },
+  "target": {
+    "connections": [
+      "sample_reorder_target"
+    ],
+    "datasets": [
+      "TGT_REORDER_QUEUE"
+    ],
+    "name": "TGT_REORDER_QUEUE"
+  }
+}
