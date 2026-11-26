@@ -1,0 +1,31 @@
+{
+  "manual_actions": [],
+  "mapping_name": "g_copy_active_customers",
+  "runtime": {
+    "parameters": [],
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "connection_name": "sample_customer_source",
+    "datasets": [
+      {
+        "connection_name": "sample_customer_source",
+        "dataset_type": "SOURCE",
+        "name": "SRC_ACTIVE_CUSTOMERS"
+      }
+    ],
+    "name": "SRC_ACTIVE_CUSTOMERS"
+  },
+  "target": {
+    "connection_name": "sample_customer_target",
+    "datasets": [
+      {
+        "connection_name": "sample_customer_target",
+        "dataset_type": "TARGET",
+        "name": "TGT_ACTIVE_CUSTOMERS"
+      }
+    ],
+    "name": "TGT_ACTIVE_CUSTOMERS"
+  }
+}
