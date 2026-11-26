@@ -1,0 +1,54 @@
+{
+  "manual_actions": [
+    "Ensure that the target file system is accessible and has sufficient space for the output data.",
+    "Verify that the PostgreSQL connection details are correctly configured in the new environment.",
+    "Test the string manipulation functions for compatibility in the target ETL tool."
+  ],
+  "mapping_name": "customer_etl_test",
+  "runtime": {
+    "parameters": [
+      {
+        "data_type": "STRING",
+        "default_value": "/opt/abinitio/db",
+        "name": "AI_DB",
+        "scope": null
+      },
+      {
+        "data_type": "STRING",
+        "default_value": "/data/serial",
+        "name": "AI_SERIAL",
+        "scope": null
+      },
+      {
+        "data_type": "STRING",
+        "default_value": "US",
+        "name": "TARGET_COUNTRY",
+        "scope": null
+      }
+    ],
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "connection_name": "$AI_DB/postgres.dbc",
+    "datasets": [
+      {
+        "connection_name": "postgres.dbc",
+        "dataset_type": "SOURCE",
+        "name": "Input_Customer_Table"
+      }
+    ],
+    "name": "Input_Customer_Table"
+  },
+  "target": {
+    "connection_name": "file:$AI_SERIAL/us_customers_clean.dat",
+    "datasets": [
+      {
+        "connection_name": "us_customers_clean.dat",
+        "dataset_type": "TARGET",
+        "name": "Output_US_Customers"
+      }
+    ],
+    "name": "Output_US_Customers"
+  }
+}
