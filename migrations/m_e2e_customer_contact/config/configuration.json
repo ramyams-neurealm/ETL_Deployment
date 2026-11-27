@@ -1,0 +1,21 @@
+{
+  "manual_actions": [],
+  "mapping_name": "m_e2e_customer_contact",
+  "runtime": {
+    "parameters": [],
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "datasets": [
+      "SRC_CUSTOMER_CONTACT"
+    ],
+    "name": "SRC_CUSTOMER_CONTACT"
+  },
+  "target": {
+    "datasets": [
+      "TGT_CUSTOMER_CONTACT"
+    ],
+    "name": "TGT_CUSTOMER_CONTACT"
+  }
+}
