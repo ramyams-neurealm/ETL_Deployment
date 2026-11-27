@@ -1,0 +1,24 @@
+{
+  "manual_actions": [
+    "Verify that the target system supports the same data types and constraints as the source, particularly for the CUSTOMER_ID field.",
+    "Ensure that the transformation logic for email normalization is compatible with the target system's requirements."
+  ],
+  "mapping_name": "m_e2e_customer_contact",
+  "runtime": {
+    "parameters": [],
+    "target_framework": "PYSPARK",
+    "target_platform": "DATABRICKS"
+  },
+  "source": {
+    "datasets": [
+      "SRC_CUSTOMER_CONTACT"
+    ],
+    "name": "SRC_CUSTOMER_CONTACT"
+  },
+  "target": {
+    "datasets": [
+      "TGT_CUSTOMER_CONTACT"
+    ],
+    "name": "TGT_CUSTOMER_CONTACT"
+  }
+}
